@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			div {
+				/*border: 1px solid black;*/
+			}
+			
+			.f {
+				width: 500px;
+				height: 500px;
+				margin: 50px;
+				/*padding: 15px;*/
+				background: pink;
+				border: solid pink;
+				/*background-image: url("http://pic15.nipic.com/20110628/1369025_192645024000_2.jpg");*/
+				/*box-sizing: border-box;*/
+			}
+			
+			.s {
+				margin-top: 30px;
+				width: 200px;
+				height: 200px;
+				background: blue;
+				color: red;
+				font-size: 40px;
+				border: solid blue;
+				/*padding: 10px;*/
+			}
+			
+			.i {
+				width: 500px;
+				height: 500px;
+				border: 1px solid red;
+			}
+			
+			.b {
+				width: 300px;
+				height: 300px;
+				border: 1px solid black;
+			}
+			
+			.is {
+				border: none;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="f">
+			
+		
+			<div class="s">
+				<p class="km">kkkkk</p>
+			</div>
+		
+
+		</div>
+
+		<div class="i">
+			<!--<iframe src="test.php" width="400px" height="400px" class="is"></iframe>-->
+
+		</div>
+
+		<ul>
+			<li class="ss">ss</li>
+			<li class="ss">ss</li>
+			<li class="ss">ss</li>
+			<li class="ss">ss</li>
+			<li class="ss">ss</li>
+			<li class="ss">ss</li>
+			<li class="ss">ss</li>
+			<li class="ss">ss</li>
+
+		</ul>
+		<input type="text" name="" id="" value="" height="50">
+		<p class="p"></p>
+		<div class="container">
+			<table border="" cellspacing="" cellpadding="" class="table">
+				<tr>
+					<th>Header</th>
+					<th>Header</th>
+				</tr>
+				<!--<tr><td>Data</td><td class="v"></td></tr>-->
+			</table>
+		</div>
+		<span>1</span>
+	</body>
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="test.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var km = document.getElementsbyClassName("km")[0]
+		km.addEventListener("click", fn)
+
+		function fn() {
+			
+		}
+//debugger;
+		//		return
+		//		import data from './ld.js'
+		//		console.log(data)
+		//		$(".s").click(function(){
+		//
+		//			$.ajax({
+		//				type:"post",
+		//				url:"test.php",
+		//				async:true,
+		//				dataType:"json",
+		//				data:{pid:"9"},
+		//				success:(res)=>{
+		//					console.log(res)
+		//			          for(k in res){
+		//			          	var im="<img src='./img/"+res[k]+"'/>"
+		//			          	console.log(im)
+		//			          	$(".i").append(im)
+		//			          }
+		//					
+		//				}
+		//			});
+		//			
+		//		})
+		//		function n(j){
+		//			var num=1
+		//		for(var i=1;i<=j;i++){
+		//			num*=i
+		//		}
+		//		return num
+		//		}
+		//		
+		//		console.log(n(3))
+		//		    
+		//		    
+		//		    
+		//		    console.log("ww")
+
+		var x = "w x"
+		var y = "jj"
+		var obj = {
+			x: "o x",
+			y: function() (){
+			
+					setTimeout(){
+						
+							function() {
+								console.log(this.y)
+								
+								  // console.log("yyy")
+		
+							}, 200
+						
+					})
+	
+				
+			}
+		}
+		//	var f=obj.y
+		obj.y()
+		//	f()
+
+		$(".ss").click(function() {
+			console.log(this)
+		})
+		var mmm = ""
+		var inp = document.getElementsbyTagName("input")[0]
+		inp.oninput = function() {
+			console.log(inp.value)
+			//	if(inp.value!=""){
+			//		alert(2)
+			//	}else{
+			//		alert(3)
+			//	}
+			$(".p")[0].innerHTML = inp.value
+			console.log($(".p")[0])
+		}
+		inp.onblur = function() {
+			mmm = inp.value
+			$(".p")[0].innerHTML = mmm
+			inp.value = ""
+		}
+		console.log(inp)
+
+		//$("input").Input(function(){
+		//	console.log(this)
+		//})
+
+		var arr = [1, 0, 2, 2, 4, 0]
+		for(k in arr) {
+			//	alert(2)
+			var st = ""
+			var tr = $("<tr><td>" + arr[k] + "</td><td class='v" + k + "'></td></tr>")
+			$(".table").append(tr)
+			for(var i = 0; i < 5; i++) {
+				//		alert(1)
+				console.log(arr[k])
+				console.log(i)
+				if(i < arr[k]) {
+					st += "<span>9</span>"
+					//			$(".v"+k).html(st)
+				} else {
+					st += "<span>2</span>"
+					//			$(".v"+k).html(st)
+				}
+
+			}
+			$(".v" + k).html(st)
+			console.log(st)
+		}
+
+		$(".i").click(function() {
+			//	alert(2)
+			// var tr=$("")
+			//    console.log(this)
+			//   this.innerHTML('<iframe src="2.html" width="" height="">')
+			//   $(".i").html('<iframe src="2.html" width="100%" height="100%">')
+			$(".is").remove()
+		})
+		console.log($(".is")[0])
+	</script>
+
+	<script type="text/javascript">
+		$.ajax({
+			type: "get",
+			url: "https://openapi.hx9999.com/tools/?service=Pushsystem.notice_list&company_id=13&terminal=ucenter&login=2777c4671394592816dbb7958dea74ac&page=1&pagesize=20&tag=real&sign=abf2ff4be441ebc9bcc4a301cb1b70ce",
+			async: true,
+			dataType: "jsonp",
+			success: function(res) {
+				console.log(res)
+			}
+		});
+	</script>
+
+</html>
